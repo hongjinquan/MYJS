@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diy Select</title>
+    <link rel="stylesheet" href="index.css" rel="external nofollow">
+</head>
+
+<body>
+    <div id="main" class="main"></div>
+    <script src="index.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // dom内容加载后的回调函数
+            const select1 = new $Selector({
+                eleSelector: "#main",
+                options: [
+                    { name: "选项1", value: "0" },
+                    { name: "选项2", value: "1" },
+                    { name: "选项3", value: "2" },
+                    { name: "选项4", value: "3" },
+                    { name: "选项5", value: "4" }
+                ],
+                defaultText: "选项2"
+            })
+        })
+    </script>
+</body>
+
+</html>

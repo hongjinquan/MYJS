@@ -1,0 +1,127 @@
+* {
+    padding   : 0;
+    margin    : 0;
+    box-sizing: border-box;
+}
+
+.main {
+    padding: 40px;
+}
+
+.my-select {
+    display       : inline-block;
+    width         : auto;
+    min-width     : 80px;
+    box-sizing    : border-box;
+    vertical-align: middle;
+    color         : #515a6e;
+    font-size     : 14px;
+    line-height   : normal;
+    position      : relative;
+}
+
+.select-selection {
+    display            : block;
+    box-sizing         : border-box;
+    outline            : 0;
+    -webkit-user-select: none;
+    -moz-user-select   : none;
+    -ms-user-select    : none;
+    user-select        : none;
+    cursor             : pointer;
+    position           : relative;
+    background-color   : #fff;
+    border-radius      : 4px;
+    border             : 1px solid #dcdee2;
+    transition         : all .2s ease-in-out;
+}
+
+.select-selection:hover,
+.select-selection.select-focus {
+    border-color: #57a3f3;
+    box-shadow  : 0 0 0 2px rgba(45, 140, 240, .2);
+}
+
+.select-selected-value {
+    display      : block;
+    height       : 28px;
+    line-height  : 28px;
+    font-size    : 12px;
+    overflow     : hidden;
+    text-overflow: ellipsis;
+    white-space  : nowrap;
+    padding-left : 8px;
+    padding-right: 24px;
+}
+
+.icon-select-arrow {
+    position               : absolute;
+    top                    : 50%;
+    right                  : 8px;
+    line-height            : 1;
+    margin-top             : -7px;
+    font-size              : 14px;
+    color                  : #808695;
+    transition             : all .2s ease-in-out;
+    display                : inline-block;
+    font-style             : normal;
+    font-weight            : 400;
+    font-variant           : normal;
+    text-transform         : none;
+    text-rendering         : auto;
+    line-height            : 1;
+    -webkit-font-smoothing : antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align         : middle;
+}
+
+.icon-select-arrow::before {
+    content         : "";
+    display         : block;
+    width           : 6px;
+    height          : 6px;
+    background-color: transparent;
+    border-left     : 1.5px solid #808695;
+    border-bottom   : 1.5px solid #808695;
+    transform       : rotate(-45deg);
+}
+
+.select-dropdown {
+    width           : auto;
+    min-width       : 80px;
+    max-height      : 200px;
+    overflow        : auto;
+    margin          : 5px 0;
+    padding         : 5px 0;
+    background-color: #fff;
+    box-sizing      : border-box;
+    border-radius   : 4px;
+    box-shadow      : 0 1px 6px rgba(0, 0, 0, .2);
+    position        : absolute;
+    z-index         : 2;
+    transform-origin: center top 0px;
+    transition      : all 0.3s;
+    will-change     : top, left;
+    top             : 30px;
+    left            : 0;
+    transform       : scale(1, 0);
+    opacity         : 0;
+}
+
+.select-item {
+    line-height: normal;
+    padding    : 7px 16px;
+    clear      : both;
+    color      : #515a6e;
+    font-size  : 12px !important;
+    white-space: nowrap;
+    list-style : none;
+    cursor     : pointer;
+    transition : background .2s ease-in-out;
+}
+
+.select-item.select-item-selected,
+.select-item:hover {
+    color           : #2d8cf0;
+    background-color: #f3f3f3;
+}
